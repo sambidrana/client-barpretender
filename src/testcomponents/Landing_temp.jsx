@@ -6,16 +6,16 @@ import Sign_up_or_in from "./Sign_up_or_in";
 // import "./Landing.css"
 
 
-const Landing = () => {
+const LandingTemp = () => {
     return (
         <div>
             <div className="signin">
                {/* <Sign_up_or_in /> */}
-                {/* <Sign_up /> */}
-                <Login />
+                <Sign_up />
+                {/* <Login /> */}
             </div>
         </div>
     );
 };
 
-export default Landing
+export default LandingTemp;
