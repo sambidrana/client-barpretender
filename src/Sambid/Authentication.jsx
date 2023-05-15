@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-
-import "../App.css";
-
 import SignUp from "./SignUp";
 import SignIn from "./SignIn";
 

@@ -1,0 +1,21 @@
+.nav-list {
+    padding: 0; 
+    text-align: center;
+}
+
+.nav-button {
+    width: 150px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    font-size: 10px;
+}
+
+.nav-button > * {
+    font-size: 20px;
+}
+
+
