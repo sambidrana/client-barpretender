@@ -1,9 +1,8 @@
 import { useState } from "react";
-import RecipeForm from "./RecipeForm";
 
 const RecipeSearch = () =>{
     return(
-        <RecipeForm />
+        <h1>he</h1>
     );
 };
 
