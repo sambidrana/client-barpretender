@@ -10,9 +10,15 @@ const Landing = () => {
     return (
         <div>
             <div className="signin">
+<<<<<<< HEAD
                {/* <Sign_up_or_in /> */}
                 {/* <Sign_up /> */}
                 <Login />
+=======
+               {/* <Sign_up_or_in />  */}
+                <Sign_up />
+                {/* <Login /> */}
+>>>>>>> 95ef3ab0dec5e9e8e14ffdcfda266f278c7e24bc
             </div>
         </div>
     );

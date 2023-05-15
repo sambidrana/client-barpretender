@@ -1,19 +1,15 @@
-.signin {
-    background-image: url("https://www.shape.com/thmb/OimlHW5CZ-xI6nC4srb96zdgrCs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/cocktail-creation-0619-78e59d08-75698c3d30fb4fe482bebde0ae71df7c.jpg");
-    height: 100vh;
-    background-size: cover;
-}
+
 .sign_in_form{
     transform: translateY(50%);
     border: solid 1px bisque;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-h1{
+.sign_in_form h1{
     text-align: center;
     color:bisque
 }
-h2, p {
+.sign_in_form h2, .sign_in_form p {
     text-align: center;
     margin: .5em auto;
     color: bisque;
@@ -23,7 +19,7 @@ label{
     color:bisque;
     font-size: 1em;
 }
-form{
+.s_i_form{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,14 +27,14 @@ form{
    
 }
 
-input{
+.s_i_form input{
     padding: 1em;
     width: 25em;
     font-size: 1em;
     border-radius: 1em;
 }
 
-.submit{
+.s_i_form .submit{
     padding: 1em;
     margin: .5em 0;
     border-radius: 1em;
