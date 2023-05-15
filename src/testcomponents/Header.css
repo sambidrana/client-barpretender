@@ -1,0 +1,22 @@
+body{
+    margin:0;
+}
+.heading{
+    height:7em;
+    background-color: rgb(52, 30, 30);
+    margin: 0 auto;   
+}
+ .heading h1{
+    color: bisque;
+    font-size: 1.5em;
+    margin: 0 auto;
+    line-height: 1.5em;
+    text-align: center;
+ }
+@media (min-width:960px) {   
+.heading h1{
+    font-size: 3em;
+    line-height: 2.5em;
+    padding-top: 0;
+}
+}
