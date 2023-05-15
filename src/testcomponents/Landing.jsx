@@ -11,7 +11,7 @@ const Landing = () => {
         <div>
             <div className="signin">
                {/* <Sign_up_or_in />  */}
-                {/* <Sign_up /> */}
+                <Sign_up />
                 {/* <Login /> */}
             </div>
         </div>

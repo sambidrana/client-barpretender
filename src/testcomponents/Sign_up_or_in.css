@@ -1,9 +1,18 @@
+.signup{
+    display: flex;
+    flex-direction: column;
+}
+
+.signup h1{
+    font-size: 3em;
+}
+
+.signup p{
+    font-size: 1.3em;
+}
 .singuporin{
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
-    align-items: center;
-    width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     gap: 3em;
