@@ -9,6 +9,9 @@ function NavBar() {
           <li className="nav-button"><a href="/create_account">Create Account</a></li>
           <li className="nav-button"><a href="/cocktails_list">Cocktails list</a></li>
           <li className="nav-button"><a href="/cocktail">Cocktail recipe</a></li>
+          <li className="nav-button"><a href="/Sambid">Sambid</a></li>
+          <li className="nav-button"><a href="/Maggie">Maggie</a></li>
+          <li className="nav-button"><a href="/Akiko">Akiko</a></li>
         </ul>
       </div>
     );

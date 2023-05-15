@@ -1,6 +1,6 @@
 // import { useState } from "react";
 import NavBar from "../components/NavBar";
-import LandingTemp from "../testcomponents/Landing_temp"
+import Landing from "../testcomponents/Landing"
 
 
 const CreateAcc = ( props ) => {
@@ -8,7 +8,7 @@ const CreateAcc = ( props ) => {
     return (
         <div className="container">
             {/* <NavBar /> */}
-            <LandingTemp />
+            <Landing />
         </div>
     );
 };
