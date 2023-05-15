@@ -1,10 +1,14 @@
 import { useState } from "react";
+import axios from "axios";
 
-const RecipeSearchForm = () => {
+const RecipeSearch = () => {
+  
     return (
         <>
-            <h2>Find a recipe</h2>
 
+        
         </>
     );
 };
+
+export default RecipeForm
