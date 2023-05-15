@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import "./App.css";
+import "../App.css";
 
-import SignUp from "./components/SignUp";
-import SignIn from "./components/SignIn";
+import SignUp from "./SignUp";
+import SignIn from "./SignIn";
 
 const SIGNUP_URL = "http://localhost:3000/users"; //      for   S I G N     U P     //
 const SIGNIN_URL = "http://localhost:3000/login"; //      for   S I G N     I N     //
 const PROFILE_URL = "http://localhost:3000/profile"; // check the user token is in the local storage if the user is already logged in
 
-function App() {
+function Authentication() {
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
 
@@ -81,6 +81,7 @@ function App() {
         })
         .then((response) => {
           const result = response.data;
+          console.log(result)
           if (result.id) {
             setUser(result.user);
           }
@@ -89,7 +90,7 @@ function App() {
           console.log("Something went wrong.. ", error);
         });
     }
-  }, []);
+  }, []); // someting in the [] as a second argument which could be a dependency for useEffect to rerender? or just save it as a function and call it in every page
 
   return (
     <>
@@ -103,7 +104,7 @@ function App() {
   );
 }
 
-export default App;
+export default Authentication;
 
 // class App extends Component {
 
