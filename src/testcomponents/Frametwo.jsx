@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./header";
 import Sidebar from "./Sidebar";
+import RecipeSearch from "./RecipeSearch";
 const Frametwo= () => {
     return(
         <>
@@ -8,6 +9,7 @@ const Frametwo= () => {
                 <Header />
                 <div className=""></div>
                 <Sidebar />
+                <RecipeSearch/>
             </div>
         </>
     );
