@@ -12,7 +12,7 @@ const Display = () => {
     const [displayCocktails, setShowCocktails] = useState([]);
     const fetchCocktail = () => {
         axios(SERVER_URL).then((response) => {
-            const cocktailDetails = (response.data[0]);
+            const cocktailDetails = (response.data[18]);
             setShowCocktails(cocktailDetails);
         });
     };
@@ -25,11 +25,11 @@ const Display = () => {
     return (
         <>
             <div className="display-container">
-                <CocktailName />
+                <CocktailName cocktailData={displayCocktails} />
                 <div className="cocktail-flex">
-                    <Image />
-                    <IngredientsList />
-                    <Methods />
+                    <Image cocktailData={displayCocktails}/>
+                    <IngredientsList cocktailData={displayCocktails}/>
+                    <Methods cocktailData={displayCocktails}/>
                 </div>
             </div>
         </>
