@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "./header";
 import Sidebar from "./Sidebar";
-import Display from "./Display";
+import CocktailDisplay from "./CocktailDisplay";
 const Frametwo= () => {
     return(
         <>
@@ -10,7 +10,7 @@ const Frametwo= () => {
                 <div className=""></div>
                 <Sidebar />
                 {/* <RecipeSearch/> */}
-                <Display />
+                <CocktailDisplay cocktailId={5}/>
             </div>
         </>
     );
