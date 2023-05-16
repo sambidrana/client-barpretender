@@ -9,7 +9,6 @@ const Frametwo= () => {
                 <Header />
                 <div className=""></div>
                 <Sidebar />
-                {/* <RecipeSearch/> */}
                 <CocktailDisplay cocktailId={5}/>
             </div>
         </>

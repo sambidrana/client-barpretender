@@ -6,10 +6,6 @@ import CocktailName from "./CocktailName";
 import Image from "./Image";
 import "./Display.css"
 
-
-
-
-
 const CocktailDisplay = (props) => {
     const { cocktailId } = props;
     const SERVER_URL = `http://localhost:3000/barpretender/cocktails/${cocktailId}`;

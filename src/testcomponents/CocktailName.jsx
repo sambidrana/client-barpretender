@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
-// import axios from "axios";
 
-// const SERVER_URL = 'http://localhost:3000/barpretender/cocktails';
 
 const CocktailName = ({cocktailData}) => {
     const cocktailName = cocktailData ? cocktailData.name : "";
