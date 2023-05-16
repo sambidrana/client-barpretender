@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./header";
 import Sidebar from "./Sidebar";
 import Display from "./Display";
+import SelectCocktail from "./SelectCocktail";
 const Frametwo= () => {
     return(
         <>
@@ -11,6 +12,7 @@ const Frametwo= () => {
                 <Sidebar />
                 {/* <RecipeSearch/> */}
                 <Display />
+                <SelectCocktail />
             </div>
         </>
     );

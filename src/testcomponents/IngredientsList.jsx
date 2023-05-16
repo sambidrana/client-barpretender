@@ -1,8 +1,3 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-
-// const SERVER_URL = 'http://localhost:3000/barpretender/cocktails';
-
 const IngredientsList = ({cocktailData}) => {
     const ingredients = cocktailData ? cocktailData.ingredients_list : "";
     const ingredientsArray = ingredients? ingredients.split(",") : [];
