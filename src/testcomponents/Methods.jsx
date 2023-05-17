@@ -1,18 +1,17 @@
 
-const Methods = ({cocktailData}) => {
-    const methods = cocktailData ? cocktailData.method : "" ;
-    
 
+const Method = ({cocktailData}) => {
+    const method = cocktailData ? cocktailData.method : "" ;
         
         return(
         <>
         <div className="methods-container">
-            <h2>Methods</h2>
-            <p>{methods} </p>
+            <h2>Method</h2>
+            <p>{ method } </p>
 
         </div>
         </>
     );
 };
 
-export default Methods
+export default Method;

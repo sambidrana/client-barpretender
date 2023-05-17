@@ -1,24 +1,8 @@
-const IngredientsList = ({cocktailData}) => {
-    const ingredients = cocktailData ? cocktailData.ingredients_list : "";
-    const ingredientsArray = ingredients? ingredients.split(",") : [];
-    // const [lists, setLists] = useState([]);
+
+
+const IngredientsList = ({ingredientsArray}) => {
+    
     const ingredient = "Ingredients";
-    // const fetchIngredients = () => {
-    //     axios(SERVER_URL).then((response) => {
-            // const ingredientsForCocktail = (response.data[0].ingredients_list);
-    //         const arrOfIngredients = ingredientsForCocktail.split(",");
-    //         // console.log(arrOfIngredients);
-    //         setLists(arrOfIngredients);
-    //     });
-
-    // };
-
-
-    // //prevent infinite communication to the server
-    // useEffect(() => {
-    //     fetchIngredients();
-    // }, []);
-    // // console.log("lists: ", lists);
 
     return (
 

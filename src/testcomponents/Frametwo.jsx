@@ -1,21 +1,24 @@
 import { useState } from "react";
 import Header from "./header";
 import Sidebar from "./Sidebar";
-import Display from "./Display";
+
 import SelectCocktail from "./SelectCocktail";
-const Frametwo= () => {
-    return(
+import CocktailDisplay from "./CocktailDisplay";
+
+const Frametwo = () => {
+    return (
         <>
             <div className="frame-two">
                 <Header />
                 <div className=""></div>
                 <Sidebar />
                 {/* <RecipeSearch/> */}
-                <Display />
+                <CocktailDisplay cocktailId={5} />
                 <SelectCocktail />
+
             </div>
         </>
     );
-    };
+};
 
 export default Frametwo

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 
+
 const CocktailName = (props) => {
     return (
         <>
@@ -11,4 +12,4 @@ const CocktailName = (props) => {
     );
 };
 
-export default CocktailName
+export default CocktailName;
