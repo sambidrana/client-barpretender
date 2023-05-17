@@ -1,0 +1,33 @@
+.display-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 500px) {
+    .cocktail-flex{
+        display: block;
+    }
+}
+/* .cocktail-flex{
+    display: block;
+    margin: 0 auto;
+} */
+@media (min-width: 700px) {   
+    .cocktail-flex{
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        gap: 3em;
+    }
+}
+
+.image-container{
+    /* background-image: url("	https://cdn.diffords.com/contrib/stock-images/2023/05/64527fb40bc74.jpg"); */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cocktailimg{
+    width:200px;
+}

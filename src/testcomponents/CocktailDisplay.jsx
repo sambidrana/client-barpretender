@@ -4,7 +4,7 @@ import IngredientsList from "./IngredientsList";
 import Method from "./Methods";
 import CocktailName from "./CocktailName";
 import Image from "./Image";
-import "./Display.css"
+import "./CocktailDisplay.css"
 
 const CocktailDisplay = (props) => {
     const { cocktailId } = props;
