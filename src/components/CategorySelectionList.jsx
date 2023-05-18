@@ -10,7 +10,6 @@ const CategorySelectionList = () => {
     const [otherAlcohol, setOtherAlcohol] = useState([]);
     const [otherIngredient, setOtherIngredient] = useState([]);
     const [selectedIngredients, setSelectedIngredients] = useState([]);
-    // const fakeIngredients = ['apple', 'lemon', 'lime'];
 
     const fetchCategories = () => {
         let token = localStorage.getItem("token");
@@ -50,7 +49,6 @@ const CategorySelectionList = () => {
     const resetSelect = ( ingredients ) => {
         setSelectedIngredients(ingredients);
     };
-    console.log(selectedIngredients)
 
   return (
     <div>

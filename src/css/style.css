@@ -1,24 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 body {
-    margin: 0;
     /* display: flex; */
-    place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
-    max-width: 760px;
+    /* place-items: center; */
+    /* min-height: 100vh; */
+    max-width: 960px;
     text-align: center;
+
+    margin: 0 auto;
 }
   
-.container {
+.main-container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 10px
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Philosopher', sans-serif; */
+    color: rgba(1, 53, 10, 0.898);
 }
 
 .inline-block {
     display: inline-block
 }
 
+.inline {
+    display: inline
+}
+
 .ingredient-category {
     border: 3px solid grey;
     border-radius: 5px;
+}
+
+header {
+    width: 100%;
+}
+
+
+
+
+
+.welcome {
+    width: 85%;
+    font-size: larger;
+}
+
+.signout-button {
+    width: 100px;
+    padding: 8px 3px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid grey;
+    
+}
+
+.selectionlist {
+    width: 45%;
 }

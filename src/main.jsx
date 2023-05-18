@@ -6,8 +6,8 @@ import {
 } from "react-router-dom";
 import './css/style.css'
 import Root from './routes/root';
-import LogIn from './routes/LogIn';
-import CreateAcc from './routes/CreateAcc';
+import SignIn from './routes/SignIn';
+import SignUp from './routes/SignUp';
 import CocktailsList from './routes/CocktailsList';
 import Cocktail from './routes/Cocktail';
 import Sambid from './routes/Sambid';
@@ -20,16 +20,14 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/login",
-        element: <LogIn />,
-      },
-      {
-        path: "/create_account",
-        element: <CreateAcc />,
-      },
-    ],
+  },
+  {
+    path: "/signin",
+    element: <SignIn />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
   },
   {
     path: "/cocktails_list",

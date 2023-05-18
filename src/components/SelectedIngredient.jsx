@@ -6,11 +6,10 @@ const SelectedIngredient = ( props ) => {
     const [ingredientList, setIngredientList] = useState([]);
 
     const _handleClick = ( e ) => {
-        const newIngredients = ingredients;
-        const indexOfIngredient = newIngredients.indexOf(e.target.value);
-        newIngredients.splice(indexOfIngredient, 1);
+        const newIngredients = ingredientList.slice(0);
+        newIngredients.splice(e.target.value, 1);
         props.onClick(newIngredients);
-
+        console.log(newIngredients)
     };
 
     useEffect(() => {
@@ -28,8 +27,8 @@ const SelectedIngredient = ( props ) => {
             <ul>
                 { ingredientList.map((ingredient, index) => {
                     return <li key={index} className="selected-ingredient"> 
-                        <span>{ingredient.name.charAt(0).toUpperCase()+ingredient.name.slice(1)}</span>
-                        <span><button onClick={ _handleClick } value={ingredient}>x</button></span>
+                        <span>{ingredient.name[0].toUpperCase()+ingredient.name.slice(1)}</span>
+                        <span><button onClick={ _handleClick } value={index}>x</button></span>
                     </li>;
                 })}
             </ul>
