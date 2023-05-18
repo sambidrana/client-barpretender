@@ -8,9 +8,9 @@ const IngredientsList = ({ingredientsArray}) => {
 
         <div className="ingredients-container">
             <h2>{ingredient}</h2>
-            <ul>
+            <ul className="ingredients">
                 { ingredientsArray.map((ingredient, index) => {
-                    return <li key={index}>{ingredient.trim()}</li>
+                    return <li key={index} className="cocktail-recipe">{ingredient.trim()}</li>
                 })}
             </ul>
         </div>

@@ -3,7 +3,10 @@ body{
 }
 .heading{
     height:7em;
-    background-color: rgb(52, 30, 30);
+    background: rgb(9,86,121);
+background: linear-gradient(5deg, rgba(9,86,121,0.8113839285714286) 35%, rgba(119,255,0,0.186734068627451) 100%);
+    /* background: rgb(19,121,9);
+background: linear-gradient(90deg, rgba(19,121,9,1) 35%, rgba(0,255,184,1) 100%); */
     margin: 0 auto;   
 }
  .heading-h1{
@@ -22,31 +25,31 @@ body{
 }
 
 .sidearea{
-    background-color: rgb(56, 48, 50);
+    background: rgb(32,25,4);
+background: linear-gradient(72deg, rgba(32,25,4,0.8113839285714286) 35%, rgba(4,10,1,0.9206276260504201) 100%);
 }
 @media (min-width: 700px) {
     .sidearea{
         max-width: 20%;
-        height: 100vh;
+        
     }
 }
 
-.sidearea h2{
+.sidebarh2{
     margin-top: 0;
     text-align: center;
-    padding: 1em;
     color: rgb(173, 19, 27);
 }
 
-.sidearea p {
+.sidebarptag {
     margin: 0 1em;
-    color: bisque; 
+    color: rgb(181, 175, 168); 
 }
 
 .options{
     display: flex;
     flex-wrap: wrap;
-    gap: .5em ;
+    gap: .2em ;
 }
 
 @media (min-width: 700px) {    
@@ -59,8 +62,17 @@ body{
 }
 
 .cocktail-btn {
-    /* padding: 1em; */
+    font-size: 16px;
     margin: .5em 0;
     border-radius: 1em;
-    width: 9em;
+    width: 10em;
+    background-color: rgb(173, 19, 27);
+    color: rgb(181, 175, 168);
+}
+
+.cocktail-btn:hover{
+    background: rgb(92,121,174);
+    background: linear-gradient(56deg, rgba(92,121,174,0.7035407913165266) 0%, rgba(167,10,174,1) 100%);
+    position: relative;
+    top: 4px;
 }

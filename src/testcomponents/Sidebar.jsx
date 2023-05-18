@@ -39,8 +39,8 @@ const Sidebar =() => {
              return(
         <>
             <div className="sidearea">
-                <h2>make cocktails</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non quo minus, maxime, dolore veritatis molestias, temporibus repellendus sapiente iusto soluta facere quod laudantium autem harum officia fugit quam et magnam!</p>
+                <h2 className="sidebarh2">make cocktails</h2>
+                <p className="sidebarptag">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non quo minus, maxime, dolore veritatis molestias, temporibus repellendus sapiente iusto soluta facere quod laudantium autem harum officia fugit quam et magnam!</p>
                 <div className="options">
                 <button className="cocktail-btn" onClick={_handleBuilderClick}>Cocktail Builder</button>
                 <button className="cocktail-btn" onClick={_handleRecipeClick}>Cocktail recipes</button>
