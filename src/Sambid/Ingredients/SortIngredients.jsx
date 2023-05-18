@@ -12,7 +12,7 @@ const SortIngredients = (props) => {
 
   const { ingredients } = props; // This data is coming from brandon, which will have a list of ingredients
   const [responseData, setResponseData] = useState([]); //coming from the backend containg all Cocktails and its ingredients
-  const [matchingCocktails, setMatchingCocktails] = useState([]);// need to list out all the cocktails that matches with ingredients
+  const [matchingCocktails, setMatchingCocktails] = useState([]); // need to list out all the cocktails that matches with ingredients
 
   const fetchCocktails = () => {
     let token = localStorage.getItem("token");
@@ -25,7 +25,6 @@ const SortIngredients = (props) => {
         .then((response) => {
           const result = response.data;
           setResponseData(result);
-          console.log(result);
         })
         .catch((error) => {
           console.log("Error from DataFromBrandon", error);
@@ -42,20 +41,23 @@ const SortIngredients = (props) => {
     // Filter the cocktails based on the selected ingredients
     const filteredCocktails = responseData.filter((cocktail) => {
       const cocktailIngredients = cocktail.ingredients;
-      // console.log(cocktailIngredients)
-  
       // Check if every selected ingredient exists in the cocktail's ingredients list
       const allIngredientsIncluded = ingredients.every((ingredient) =>
         cocktailIngredients.some(
           (cocktailIngredient) => cocktailIngredient.name === ingredient
         )
       );
-  
+
       return allIngredientsIncluded;
     });
-  
+
     setMatchingCocktails(filteredCocktails);
   }, [ingredients, responseData]);
+
+  
+  const _handleClick = (e) => {
+    props.onClick(e.target.value);
+  };
 
   return (
     <div>
@@ -70,7 +72,12 @@ const SortIngredients = (props) => {
         {matchingCocktails.length > 0 ? (
           <ul>
             {matchingCocktails.map((cocktail) => (
-              <button key={cocktail.id}>{cocktail.name} </button>
+              <li key={cocktail.id}>
+                <button value={cocktail.id} onClick={_handleClick}>
+                  {" "}
+                  {cocktail.name}{" "}
+                </button>
+              </li>
             ))}
           </ul>
         ) : (
@@ -83,41 +90,3 @@ const SortIngredients = (props) => {
 
 export default SortIngredients;
 
-// const { ingredients, allData } = props;
-//   const renderCocktail = [];
-//   console.log(allData);
-
-//   const selectedIngredients = { ...ingredients }; // no function fi
-//   console.log(ingredients);
-//   console.log(selectedIngredients);
-
-//   const filterCocktail = allData.filter((item) => {
-//     return ingredients.includes(item.name);
-//   });
-
-//   console.log(filterCocktail);
-//   // this page sort the selection done from "DataFromBrandon" and should render all cocktails that can be made from that ingredients
-//   return (
-//     <div>
-//       <div>
-//         <h3>Selection</h3>
-//       </div>
-//       {ingredients.map((ing, i) => (
-//         <p key={i}> {ing} </p>
-//       ))}
-
-//       <h3>Cocktails:</h3>
-//       <ul>
-//         {filterCocktail.map((item) => {
-//           return item.cocktails.map((cocktail) => {
-//             if (!renderCocktail.includes(cocktail.name)) {
-//               renderCocktail.push(cocktail.name);
-//               return <button key={cocktail.id}>{cocktail.name}</button>;
-//             }
-//             return null;
-//           });
-//         })}
-//       </ul>
-//     </div>
-//   );
-// };
