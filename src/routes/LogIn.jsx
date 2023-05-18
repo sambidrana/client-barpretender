@@ -2,12 +2,11 @@
 import NavBar from "../components/NavBar";
 import Landing from "../testcomponents/Landing"
 
-
 const LogIn = ( props ) => {
 
     return (
         <div className="container">
-            {/* <NavBar /> */}
+            <NavBar />
             <Landing />
         </div>
     );

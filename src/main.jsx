@@ -5,6 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
+import './css/style.css'
 import Root from './routes/root';
 import LogIn from './routes/LogIn';
 import CreateAcc from './routes/CreateAcc';
@@ -54,7 +55,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </>,
 )

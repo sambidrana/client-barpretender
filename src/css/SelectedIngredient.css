@@ -1,0 +1,44 @@
+.selected-list {
+    padding: 5spx;
+    width: 100%;
+    /* border: 1px solid grey; */
+    background-color: gray;
+    border-radius: 5px;
+}
+
+.selected-list > div:first-child {
+    border-bottom: 5px double white;
+}
+
+ul:has(.selected-ingredient) {
+    padding-left: 0;
+}
+
+.selected-ingredient {
+    list-style-type: none;
+}
+
+.ingredient-lists {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+   
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.ingredient-box {
+    width: 130px;
+    block-size: fit-content;
+    /* border: 1px solid red; */
+    padding-top: 20px;
+    min-inline-size: fit-content;
+    cursor: pointer;
+}
+
+img {
+    width: 50px;
+}
+
