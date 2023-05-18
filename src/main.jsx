@@ -44,7 +44,7 @@ const router = createBrowserRouter([
     element: <Sambid />,
   },
     {
-    path: "/maggie/",
+    path: "/maggie/", 
     element: <Maggie />,
   },
   {
