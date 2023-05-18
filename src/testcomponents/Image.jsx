@@ -1,11 +1,12 @@
 import { useState } from "react";
 import axios from "axios";
-import "./Image.css"
+import "./CocktailDisplay.css"
 
-const Image = ()=> {
+const Image = (props)=> {
     return(
         <>
         <div className="image-container">
+            <img src={ props.cocktailData.image } alt="" className="cocktailimg"/>
         </div>
         </>
     );

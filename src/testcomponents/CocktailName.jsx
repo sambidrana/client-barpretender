@@ -1,12 +1,9 @@
-import { useState, useEffect } from "react";
-
-
 
 const CocktailName = (props) => {
     return (
         <>
             <div>
-                <h1>{ props.cocktails.name} </h1>
+                <h1 className="cocktail-name">{ props.cocktailData.name} </h1>
             </div>
         </>
     );
