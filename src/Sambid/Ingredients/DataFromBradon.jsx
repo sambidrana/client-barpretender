@@ -1,12 +1,15 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import SortIngredients from "./SortIngredients";
+import CocktailDisplay from "./CocktailDisplay";
 
 const DataFromBrandon = function () {
   const INGREDIENTS_URL = "http://localhost:3000/ingredients";
   //should pass an array of ingredients down to me - eg Whiskey
   const [ingredients, setIngredients] = useState([]);
   const [responseData, setResponseData] = useState([]);
+  const [cocktail, setCocktail] = useState("");
+
 
   const fetchIngredients = () => {
     let token = localStorage.getItem("token");
@@ -19,7 +22,6 @@ const DataFromBrandon = function () {
         .then((response) => {
           const result = response.data;
           setResponseData(result);
-          // console.log(result);
         })
         .catch((error) => {
           console.log("Error from DataFromBrandon", error);
@@ -32,7 +34,6 @@ const DataFromBrandon = function () {
   const _handleIngredients = (name) => {
     setIngredients([...ingredients, name]);
   };
-  console.log(ingredients);
 
   return (
     <div>
@@ -44,8 +45,11 @@ const DataFromBrandon = function () {
           </button>
         );
       })}
-{/* no need for all data, brandon will pass a list of ingredients from here #####   allData={responseData}*/}
-      <SortIngredients ingredients={ingredients}  /> 
+      <SortIngredients
+        ingredients={ingredients}
+        onClick={setCocktail}
+      />
+      <CocktailDisplay cocktailId={cocktail} ingredientsChange={ingredients} />
     </div>
   );
 };
