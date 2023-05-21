@@ -4,10 +4,11 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import './index.css'
+import './css/style.css'
 import Root from './routes/root';
-import LogIn from './routes/LogIn';
-import CreateAcc from './routes/CreateAcc';
+import SignIn from './routes/SignIn';
+import SignUp from './routes/SignUp';
+import Admin from './components/Admin/Admin';
 import CocktailsList from './routes/CocktailsList';
 import Cocktail from './routes/Cocktail';
 import Sambid from './routes/Sambid';
@@ -20,17 +21,20 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/login",
-        element: <LogIn />,
-      },
-      {
-        path: "/create_account",
-        element: <CreateAcc />,
-      },
-    ],
   },
+  {
+    path: "/signin",
+    element: <SignIn />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
+  },
+  {
+    path: "/admin",
+    element: <Admin />,
+  },
+  // >>>>>>>>> Below routes are from develop and debugging purpose only
   {
     path: "/cocktails_list",
     element: <CocktailsList />,
@@ -54,7 +58,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </>,
 )

@@ -7,41 +7,45 @@
 .log_in_form{
     border: solid 1px bisque;
     background-color: rgba(0, 0, 0, 0.5);
-    transform: translateY(50%);
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.loginh1 {
-    text-align: center;
-    color:bisque
-}
-.login h2 {
-    text-align: center;
-    margin: .5em auto;
-    color: bisque;
-}
-
-label{
+.login-front-color {
     color:bisque;
-    font-size: 1em;
+    text-align: center;
 }
+
+
+.loginh2 {
+    margin: .5em auto;
+}
+
 .login{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:.3em;
-   
+    gap:.3em; 
 }
 
-input{
+/* input{
     padding: 1em;
     width: 25em;
     font-size: 1em;
     border-radius: 1em;
-}
+} */
 
 .submit{
     padding: 1em;
     margin: .5em 0;
     border-radius: 1em;
     width:8em;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.over-18-box {
+    width: 100px;
 }
