@@ -25,7 +25,7 @@ const SignUp = function (props) {
     setOverAge(event.target.checked);
   };
   return (
-    <div className="sign_in_form">
+    <div className="log_in_form login-front-color">
       <h1>JOIN US, BARPRETENDER</h1>
       <h2>Sign Up</h2>
 

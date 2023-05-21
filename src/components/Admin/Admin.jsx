@@ -1,90 +1,121 @@
-import "../css/admin.css"
-import React, { useState, useEffect } from 'react';
+import "../../css/admin.css"
+import { useState, useEffect } from 'react';
 import axios from 'axios';
-import UpdateCocktailForm from '../MaggieComponent/UpdateCocktail';
-import CocktailList from "../MaggieComponent/CocktailList";
-import CocktailForm from '../MaggieComponent/CocktailForm';
-import IngredientForm from '../MaggieComponent/IngredientsForm';
-import IngredientsList from '../MaggieComponent/IngredientsList';
-import { NavLink } from 'react-router-dom';
+import UpdateCocktailForm from './UpdateCocktailForm';
+import CocktailList from "./CocktailList";
+import CocktailForm from './CocktailForm';
+import IngredientForm from './IngredientsForm';
+import IngredientsList from './IngredientsList';
+import SignOut from "../SignOut";
+import { useNavigate } from "react-router-dom";
 
 
 const COCKTAIL_URL = 'http://localhost:3000/barpretender/cocktails';
 const INGREDIENT_URL = 'http://localhost:3000/barpretender/ingredients'; 
 
-const Cocktails = () => {
+const Admin = () => {
+    const navigate = useNavigate();
     const [cocktails, setCocktails] = useState([]);
     const [editing, setEditing] = useState(false);
     const [currentCocktail, setCurrentCocktail] = useState(null);
     const [allIngredients, setAllIngredients] = useState([]);
-
-    useEffect(() => {
-        fetchCocktails();
-    }, []);
-
-    useEffect(() => {
-        console.log('Editing state:', editing);
-    }, [editing]);
-
-    const fetchAllIngredients = () => {
-        axios.get('http://localhost:3000/ingredients')
-            .then(response => {
-                setAllIngredients(response.data);
-            });
-    };
-    
-    useEffect(() => {
-        fetchAllIngredients();
-    }, []);
-
-    const fetchCocktails = () => {
-        axios.get(COCKTAIL_URL)
-            .then(response => {
-                setCocktails(response.data);
-            });
-    };
-
-    const handleEditCocktail = (cocktail) => {
-        setEditing(true);
-        console.log('Editing state:', editing);
-        setCurrentCocktail(cocktail);
-    };
-
-    const deleteCocktail = (id) => {
-        axios.delete(`${COCKTAIL_URL}/${id}`)
-            .then(() => {
-                fetchCocktails();
-            });
-    };
-
     const [currentIngredient, setCurrentIngredient] = useState(null);
+    const [view, setView] = useState('editCocktail');  // 'cocktails', 'createCocktail', 'editCocktail', 'createIngredient', 'editIngredient'
 
-    const handleUpdateIngredient = (ingredient) => {
-        axios.put(`${INGREDIENT_URL}/${ingredient.id}`, ingredient)
-            .then(() => {
-                fetchAllIngredients();
-                setCurrentIngredient(null);
-            });
-    };
+  useEffect(() => {
+    if (!localStorage.getItem("admin")) navigate('/')
+  }, []);
 
-    const editIngredient = (ingredient) => {
-        setCurrentIngredient(ingredient);
-};
+  const fetchCocktails = () => {
+    let token = localStorage.getItem("token");
+    if (token) {
+    axios.get(COCKTAIL_URL, {
+      headers: {
+      Authorization: `Bearer ${token}`,
+      },
+    }).then(response => {
+            setCocktails(response.data);
+        })};
+  };
+
+  useEffect(() => {
+    fetchCocktails();
+}, []);
+
+  const fetchAllIngredients = () => {
+    let token = localStorage.getItem("token");
+    if (token) {
+      axios.get('http://localhost:3000/ingredients', {
+        headers: {
+        Authorization: `Bearer ${token}`,
+        },
+      }).then(response => {
+              setAllIngredients(response.data);
+      })};
+  };
+  
+  useEffect(() => {
+      fetchAllIngredients();
+  }, []);
 
 
-    const deleteIngredient = (id) => {
-        axios.delete(`${INGREDIENT_URL}/${id}`)
-        .then(() => {
-            fetchAllIngredients();
-    });
-};
 
-const [view, setView] = useState('cocktails');  // 'cocktails', 'createCocktail', 'editCocktail', 'createIngredient', 'editIngredient'
+  const handleEditCocktail = (cocktail) => {
+      setEditing(true);
+      console.log('Editing state:', editing);
+      setCurrentCocktail(cocktail);
+  };
 
-return (
-    <div className="admin-container">
-      <div className="navbar">
-        <NavLink to="/" className="navbar-link">Home</NavLink>
+  const deleteCocktail = (id) => {
+    let token = localStorage.getItem("token");
+    if (token) {
+      axios.delete(`${COCKTAIL_URL}/${id}`, {
+        headers: {
+        Authorization: `Bearer ${token}`,
+        },
+      }).then(() => {
+              fetchCocktails();
+          })};
+  };
+
+
+  const handleUpdateIngredient = (ingredient) => {
+    let token = localStorage.getItem("token");
+    if (token) {
+      axios.put(`${INGREDIENT_URL}/${ingredient.id}`, ingredient, {
+        headers: {
+        Authorization: `Bearer ${token}`,
+        },
+      }).then(() => {
+              fetchAllIngredients();
+              setCurrentIngredient(null);
+          })};
+  };
+
+  const editIngredient = (ingredient) => {
+      setCurrentIngredient(ingredient);
+  };
+
+
+  const deleteIngredient = (id) => {
+    let token = localStorage.getItem("token");
+    if (token) {
+      axios.delete(`${INGREDIENT_URL}/${id}`, {
+        headers: {
+        Authorization: `Bearer ${token}`,
+        },
+      }).then(() => {
+          fetchAllIngredients();
+    })};
+  };
+
+  useEffect(() => {
+    console.log('Editing state:', editing);
+  }, [editing]);
+
+  return (
+    <div className="container">
+      <div className="navbar inline-block">
         <button className="button" onClick={() => setView('createCocktail')}>Create Cocktail</button>
         <button className="button" onClick={() => {
           setView('editCocktail');
@@ -92,6 +123,12 @@ return (
         }}>Edit Cocktails</button>
         <button className="button" onClick={() => setView('createIngredient')}>Create Ingredient</button>
         <button className="button" onClick={() => setView('editIngredient')}>Edit Ingredients</button>
+      </div>
+      <div className="inline-block">
+          <a href="/">
+              <img className="pointer signout-icon" src="public/home.png" alt="home button"/>
+          </a>
+          <SignOut />
       </div>
   
       <div className="container">
@@ -122,4 +159,4 @@ return (
   );
 };
   
-export default Cocktails;
+export default Admin;

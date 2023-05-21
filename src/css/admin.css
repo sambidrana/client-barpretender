@@ -11,9 +11,9 @@ body {
 }
 
 .navbar {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  width: 60%;
+  margin-inline: 20% 5%;
+  /* transform: translateX(8%); */
 }
 
 .navbar-link {
@@ -24,6 +24,7 @@ body {
 
 .button {
   background-color: #333;
+  margin-inline: 8px;
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -111,6 +112,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+  background-color: #eaeaea;
 }
 
 .ingredients-name {
@@ -136,7 +138,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
+  margin: 10px ;
 }
 
 .ingredient-buttons .ingredients-button {
@@ -175,12 +177,14 @@ body {
   width: 300px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  display: block;
+  margin: 20px auto;
 }
 
 .ingredient-form-select {
-  margin: 10px 0;
+  margin: 3px 0;
   padding: 5px;
-  width: 300px;
+  width: 315px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -192,6 +196,8 @@ body {
   padding: 10px 15px;
   border-radius: 4px;
   cursor: pointer;
+  display: block;
+  margin: 20px auto 0 auto;
 }
 
 .ingredient-form-submit:hover {
@@ -206,22 +212,29 @@ body {
 
 .cocktail-list {
   margin-top: 20px;
+  max-height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  vertical-align: bottom;  
 }
 
 /* cocktail item */
 
 .cocktail-item {
-  background-color: #f5f5f5;
-  padding: 10px;
-  border-radius: 4px;
+  background-color: #eaeaea;
+  margin: 10px;
   margin-bottom: 10px;
   text-align: center;
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 21%;
+  
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 .cocktail-item h2 {
+  margin-top: 15px;
   margin-bottom: 5px;
 }
 
@@ -230,11 +243,12 @@ body {
 }
 
 .cocktail-item img {
-  width: 150px;
-  height: 150px;
+  width: 80%;
+  height: calc(600px/4);
   object-fit: cover;
   border-radius: 4px;
   margin: 0 auto;
+  
 }
 
 .cocktail-item .cocktail-details {
@@ -296,6 +310,7 @@ body {
     background-color: #333;
     color: #fff;
     border: none;
+    margin: 7px;
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
@@ -303,35 +318,40 @@ body {
 }
 
 .ingredients-grid {
+  margin: 20px;
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 @media (min-width: 600px) {
   .ingredients-grid {
+    max-width: 100%;
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-  
-  
   .update-form-checkbox-label {
     display: flex;
     align-items: center;
+    width: 90%;
     color: #333;
+    margin: 0 10px;
+
     justify-content: flex-start; /* Align checkbox and text to the start */
     gap: 5px; /* Adjust this for the gap between checkbox and text */
   }
   
   .update-form-checkbox-label input[type="checkbox"] {
-    margin-right: -170px;
+    /* margin-right: -170px; */
+    max-width: 80px;
   }
   
   .ingredients-list-grid {
     display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10;
+    grid-template-columns: repeat(auto-fit, minmax(16%, 1fr));
+    gap: 20px;
   }
   
   @media (min-width: 600px) {

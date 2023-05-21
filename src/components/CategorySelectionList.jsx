@@ -5,21 +5,23 @@ import SelectedIngredient from "../components/SelectedIngredient";
 
 const SERVER_URL = 'http://localhost:3000/barpretender/ingredients';
 
-const CategorySelectionList = () => {
+const CategorySelectionList = ( props ) => {
     const [baseSpirit, setBaseSpirit] = useState([]);
     const [otherAlcohol, setOtherAlcohol] = useState([]);
     const [otherIngredient, setOtherIngredient] = useState([]);
     const [selectedIngredients, setSelectedIngredients] = useState([]);
 
+    // fetch ingredient from seed and split into catogories
     const fetchCategories = () => {
         let token = localStorage.getItem("token");
-        if (token) {
+        if (token) {    // check token with JWT
             axios(SERVER_URL, {
                 headers: {
                 Authorization: `Bearer ${token}`,
                 },
             }).then((response) =>{
                 response.data.forEach(ingredient => {
+                    // separate catogories
                     ingredient.category === "base_spirit"? setBaseSpirit(baseSpirit => [...baseSpirit, ingredient]):
                     ingredient.category === "other_alcohol"?  setOtherAlcohol(otherAlcohol => [...otherAlcohol, ingredient]):
                     setOtherIngredient(otherIngredient =>[...otherIngredient, ingredient]);
@@ -30,24 +32,26 @@ const CategorySelectionList = () => {
     
     useEffect( fetchCategories, []);
 
+    // Deselect when click on the same ingredient for the second time
     const recordSelect = ( ingredient ) => {
         if (selectedIngredients.includes(ingredient)) {
             const tempIngredients = selectedIngredients.slice(0);
             const indexOfIngredient = tempIngredients.indexOf(ingredient);
             tempIngredients.splice(indexOfIngredient, 1);
             setSelectedIngredients(tempIngredients);
-            console.log(tempIngredients);
-            console.log(selectedIngredients);
-            console.log('Click remove');
+            props.ingredientList(tempIngredients);
         } else {
             setSelectedIngredients([...selectedIngredients, ingredient]);
             console.log(selectedIngredients);
-            console.log('Click add');
+            props.ingredientList([...selectedIngredients, ingredient]);
         };
     };
 
+    // Reset while deleting from the list
     const resetSelect = ( ingredients ) => {
-        setSelectedIngredients(ingredients);
+        const newIngredients=ingredients.slice()
+        setSelectedIngredients( newIngredients );
+        props.ingredientList(ingredients);
     };
 
   return (

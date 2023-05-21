@@ -36,7 +36,7 @@ function AuthSignIn( props ) {
         if (result.token) {
           localStorage.setItem("token", result.token);
           setUser(result.username);
-          if (result.admin) localStorage.setItem("admin", result.admin);
+          if (result.user.admin) localStorage.setItem("admin", result.user.admin);
           navigate("/");
         }
       })

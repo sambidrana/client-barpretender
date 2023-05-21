@@ -15,7 +15,7 @@ const SignOut = () => {
 
   return (
     <>
-      <input className="pointer signout-button" type="button" value="Sign Out" onClick={_handleSignOut} />
+      <img className="pointer signout-icon" src="public/sign_out.png" alt="sign-out" onClick={_handleSignOut}/>
     </>
   );
 };

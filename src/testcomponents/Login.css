@@ -28,12 +28,12 @@
     gap:.3em; 
 }
 
-input{
+/* input{
     padding: 1em;
     width: 25em;
     font-size: 1em;
     border-radius: 1em;
-}
+} */
 
 .submit{
     padding: 1em;

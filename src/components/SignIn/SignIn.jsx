@@ -26,7 +26,7 @@ const SignIn = (props) => {
 
       <h2 className="loginh2">Sign in</h2>
 
-      <form className="login" onSubmit={_handleSubmit}>
+      <form className="s_i_form" onSubmit={_handleSubmit}>
         <label htmlFor="username">Username: </label>
         <input name="username" value={username} onChange={_handleUsername} required />
 

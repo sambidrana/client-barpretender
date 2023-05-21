@@ -8,6 +8,7 @@ import './css/style.css'
 import Root from './routes/root';
 import SignIn from './routes/SignIn';
 import SignUp from './routes/SignUp';
+import Admin from './components/Admin/Admin';
 import CocktailsList from './routes/CocktailsList';
 import Cocktail from './routes/Cocktail';
 import Sambid from './routes/Sambid';
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
     path: "/signup",
     element: <SignUp />,
   },
+  {
+    path: "/admin",
+    element: <Admin />,
+  },
+  // >>>>>>>>> Below routes are from develop and debugging purpose only
   {
     path: "/cocktails_list",
     element: <CocktailsList />,
