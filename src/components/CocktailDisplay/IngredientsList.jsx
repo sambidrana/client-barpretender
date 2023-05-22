@@ -1,4 +1,3 @@
-
 const IngredientsList = ({ingredientsArray}) => {
     
     const ingredient = "Ingredients";

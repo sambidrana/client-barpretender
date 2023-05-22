@@ -1,11 +1,11 @@
 import "../css/admin.css"
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import UpdateCocktailForm from '../MaggieComponent/UpdateCocktail';
-import CocktailList from "../MaggieComponent/CocktailList";
-import CocktailForm from '../MaggieComponent/CocktailForm';
-import IngredientForm from '../MaggieComponent/IngredientsForm';
-import IngredientsList from '../MaggieComponent/IngredientsList';
+import UpdateCocktailForm from '../Archived/MaggieComponent/UpdateCocktail';
+import CocktailList from "../Archived/MaggieComponent/CocktailList";
+import CocktailForm from '../Archived/MaggieComponent/CocktailForm';
+import IngredientForm from '../Archived/MaggieComponent/IngredientsForm';
+import IngredientsList from '../Archived/MaggieComponent/IngredientsList';
 import { NavLink } from 'react-router-dom';
 
 

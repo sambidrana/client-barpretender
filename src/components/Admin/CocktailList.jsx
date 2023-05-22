@@ -1,8 +1,7 @@
 import axios from 'axios';
 import CocktailItem from './CocktailItem';
 
-
-const COCKTAIL_URL = 'http://localhost:3000/barpretender/cocktails';
+const COCKTAIL_URL = 'http://localhost:3000/cocktails';
 
 const CocktailList = ({ cocktails, onEditCocktail, onFetchCocktails, editing, currentCocktail, onSetEditing }) => {
     const deleteCocktail = (id) => {

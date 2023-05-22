@@ -1,9 +1,4 @@
-import { useState } from "react";
-import axios from "axios";
-// import "./Image.css"
-
 const Image = (props)=> {
-
     
     return(
         <>

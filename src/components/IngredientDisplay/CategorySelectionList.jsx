@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import IngredientBox from "./IngredientBox";
-import SelectedIngredient from "../components/SelectedIngredient";
+import SelectedIngredient from "./SelectedIngredient";
 
-const SERVER_URL = 'http://localhost:3000/barpretender/ingredients';
+const SERVER_URL = 'http://localhost:3000/ingredients';
 
 const CategorySelectionList = ( props ) => {
     const [baseSpirit, setBaseSpirit] = useState([]);

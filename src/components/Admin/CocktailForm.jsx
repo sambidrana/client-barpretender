@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-
-const COCKTAIL_URL = 'http://localhost:3000/barpretender/cocktails';
-const INGREDIENT_URL = 'http://localhost:3000/barpretender/ingredients';
+const COCKTAIL_URL = 'http://localhost:3000/cocktails';
+const INGREDIENT_URL = 'http://localhost:3000/ingredients';
 
 const CocktailForm = ({ onFetchCocktails }) => {
     const [newName, setNewName] = useState("");

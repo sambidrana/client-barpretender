@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Method from "./Methods";
-import IngredientsList from "../IngredientsList";
+import IngredientsList from "./IngredientsList";
 import Image from "./Image";
 // import "./Display.css"
 
@@ -11,7 +11,7 @@ const CocktailDisplay = (props) => {
   // const [reset, setReset ] = useState(false)
   console.log(ingredientsChange)
 
-  const SERVER_URL = `http://localhost:3000/barpretender/cocktails/${cocktailId}`;
+  const SERVER_URL = `http://localhost:3000/cocktails/${cocktailId}`;
 
   const fetchCocktail = () => {
     let token = localStorage.getItem("token");

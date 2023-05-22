@@ -1,7 +1,6 @@
-// import axios from "axios";
 import { useState } from "react";
-import SortIngredients from "./CocktailDisplay/SortIngredients";
-import CocktailDisplay from "./CocktailDisplay/CocktailDisplay";
+import SortIngredients from "./SortIngredients";
+import CocktailDisplay from "./CocktailDisplay";
 
 const CocktailDisplayList = function ( props ) {
   const [cocktail, setCocktail] = useState("");

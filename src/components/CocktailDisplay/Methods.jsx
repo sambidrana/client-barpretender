@@ -1,5 +1,3 @@
-
-
 const Method = ({cocktailData}) => {
     const method = cocktailData ? cocktailData.method : "" ;
         
