@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import CategorySelectionList from "../components/CategorySelectionList";
-import CocktailDisplayList from "../components/CocktailDisplyList";
+import CategorySelectionList from "../components/IngredientDisplay/CategorySelectionList";
+import CocktailDisplayList from "../components/CocktailDisplay/CocktailDisplyList";
 import SignOut from "../components/SignOut";
 // import NavBar from "../components/NavBar";
 import "../css/style.css"

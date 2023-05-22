@@ -1,4 +1,4 @@
-import "../css/SelectedIngredient.css"
+import "../../css/SelectedIngredient.css"
 import { useState, useEffect } from "react";
 
 const SelectedIngredient = ( props ) => {

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-
-const INGREDIENT_URL = 'http://localhost:3000/barpretender/ingredients';
+const INGREDIENT_URL = 'http://localhost:3000/ingredients';
 
 const IngredientForm = ({ currentIngredient, onUpdateIngredient, onFetchIngredients }) => {
     const [name, setName] = useState(currentIngredient ? currentIngredient.name : "");

@@ -1,4 +1,4 @@
-import NavBar from "../components/NavBar";
+import NavBar from "./NavBar";
 import CategorySelectionList from "../BrandonComponent/CategorySelectionList";
 
 const Cocktail = () => {

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-
-const COCKTAIL_URL = 'http://localhost:3000/barpretender/cocktails';
+const COCKTAIL_URL = 'http://localhost:3000/cocktails';
 
 const UpdateCocktailForm = ({ cocktail, onFetchCocktails, onSetEditing }) => {
     const [name, setName] = useState(cocktail.name);

@@ -1,12 +1,12 @@
-import "../../css/admin.css"
+import "../css/admin.css"
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import UpdateCocktailForm from './UpdateCocktailForm';
-import CocktailList from "./CocktailList";
-import CocktailForm from './CocktailForm';
-import IngredientForm from './IngredientsForm';
-import IngredientsList from './IngredientsList';
-import SignOut from "../SignOut";
+import UpdateCocktailForm from '../components/Admin/UpdateCocktailForm';
+import CocktailList from "../components/Admin/CocktailList";
+import CocktailForm from '../components/Admin/CocktailForm';
+import IngredientForm from '../components/Admin/IngredientsForm';
+import IngredientsList from '../components/Admin/IngredientsList';
+import SignOut from "../components/SignOut";
 import { useNavigate } from "react-router-dom";
 
 
