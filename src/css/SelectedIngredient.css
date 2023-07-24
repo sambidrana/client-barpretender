@@ -31,10 +31,17 @@ ul:has(.selected-ingredient) {
 .ingredient-box {
     width: 130px;
     block-size: fit-content;
-    /* border: 1px solid red; */
     padding-top: 20px;
     min-inline-size: fit-content;
     cursor: pointer;
+    /* Add transition property for smooth transformation */
+    transition: transform .2s; 
+}
+
+.ingredient-box:hover {
+    /* padding: 5px; */
+    /* transform property to scale the box on hover */
+    transform: scale(1.1); 
 }
 
 img {
