@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import CategorySelectionList from "../components/IngredientDisplay/CategorySelectionList";
 import CocktailDisplayList from "../components/CocktailDisplay/CocktailDisplyList";
 import SignOut from "../components/SignOut";
-// import NavBar from "../components/NavBar";
 import "../css/style.css"
 
 
@@ -24,7 +23,7 @@ const Root = () => {
         <div className="container">
             <header>
                 <div className="inline-block welcome">
-                    <h2>Welcome {username}, the bar is now yours!</h2>
+                    <h2 className="header-welcome">Welcome {username}, the bar is now yours!</h2>
                 </div>
                 <div className="inline-block">
                     {/* check if to show admin button */}
@@ -35,14 +34,11 @@ const Root = () => {
                     <SignOut />
                 </div>
             </header>
-            {/* <NavBar /> */}
             {/* Cocktail selection list */}
-            <div className="banner">
-            </div>
-            <div className="selectionlist inline-block add-border">
+            <div className="selectionlist inline-block add-border category-container">
                 <CategorySelectionList ingredientList={ setIngredientsList } />
             </div>
-            <div className="selectionlist inline-block">
+            <div className="selectionlist inline-block cocktail-container">
                 <CocktailDisplayList ingredients={ ingredientList } />
             </div>
         </div>

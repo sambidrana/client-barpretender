@@ -2,21 +2,14 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); */
 
 body {
-    /* display: flex; */
-    /* place-items: center; */
     /* min-height: 100vh; */
-    max-width: 960px;
+    /* max-width: 1224px; */
     text-align: center;
     margin: 0 auto;
-}
- 
-.banner {
-    width: 90%;
-    padding: 10px;
-    height: 15em;
-    margin: 20px auto;
-    background: url("../public/cocktailbar.jpg") no-repeat center;
-    background-size: cover ;
+    /* background-image: 
+        linear-gradient(to right, rgba(255,255,255,0.5), rgba(255,255,255,0.5)), 
+        url("../../public/bartender-making-cocktails-counter.jpg");
+    background-size: cover; */
 }
 
 .container {
@@ -57,7 +50,10 @@ a.font {
 
 .welcome {
     width: 85%;
-    font-size: larger;
+    font-size: 1.8em;
+}
+.header-welcome {
+    text-shadow: 0 0 5px white;
 }
 
 .signout-icon {

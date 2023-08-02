@@ -6,9 +6,9 @@ const CocktailDisplayList = function ( props ) {
   const [cocktail, setCocktail] = useState("");
 
   return (
-    <div>
-      <CocktailDisplay cocktailId={cocktail} ingredientsChange={props.ingredients} />
+    <div className="display-cocktail-container">
       <SortIngredients ingredients={props.ingredients} onClick={setCocktail}/>
+      <CocktailDisplay cocktailId={cocktail} ingredientsChange={props.ingredients} />
     </div>
   );
 };
