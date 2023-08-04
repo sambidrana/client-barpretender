@@ -55,12 +55,8 @@ const CategorySelectionList = ( props ) => {
     };
 
   return (
-    <div>
-        {/* onMouseEnter={() => setIsShown(true)}
-        onMouseLeave={() => setIsShown(false)} */}
-
-        <SelectedIngredient ingredients = { selectedIngredients } onClick={ resetSelect } />
-
+    <div className="main-container">
+    <div className="selections-container">
         <div className="ingredient-category">
             <h3>Base Spirit</h3>
         </div>
@@ -86,6 +82,11 @@ const CategorySelectionList = ( props ) => {
             })}
         </div>
     </div>
+    <div className="selected-ingredients-container">
+        <SelectedIngredient ingredients = { selectedIngredients } onClick={ resetSelect } />
+    </div>
+</div>
+
   );
 };
 

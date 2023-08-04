@@ -1,51 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); */
 
+/* remove later */
+* {
+    /* border: 1px solid white; */
+}
 body {
     /* min-height: 100vh; */
     /* max-width: 1224px; */
+    
     text-align: center;
     margin: 0 auto;
+    background-color: rgb(245, 222, 179);
+    font-family: 'Philosopher', sans-serif;
+
     /* background-image: 
         linear-gradient(to right, rgba(255,255,255,0.5), rgba(255,255,255,0.5)), 
         url("../../public/bartender-making-cocktails-counter.jpg");
     background-size: cover; */
 }
 
-.container {
-    max-width: 100%;
-    padding: 10px;
-    /* font-family: 'Montserrat', sans-serif; */
-    font-family: 'Philosopher', sans-serif;
-    color: rgba(1, 53, 10, 0.898);
-    margin: 0 auto;
+/* //////////// /////// //////// Root ////// ////////// ///////////// */
+.root-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.inline-block {
-    display: inline-block
+.header-username {
+    text-decoration: underline  white 5px  ;
 }
-
-.inline {
-    display: inline
-}
-
-.block {
-    display: block;
-}
-
-.ingredient-category {
-    border: 3px solid grey;
-    border-radius: 5px;
-}
-
 header {
     width: 100%;
-}
-
-a.font {
-    color: rgb(62, 0, 0);
-    text-decoration: none;
-    font-weight: 600;
 }
 
 .welcome {
@@ -53,7 +38,8 @@ a.font {
     font-size: 1.8em;
 }
 .header-welcome {
-    text-shadow: 0 0 5px white;
+    text-shadow: 0 0 10px white;
+    letter-spacing: 1px;
 }
 
 .signout-icon {
@@ -61,31 +47,69 @@ a.font {
     margin: auto 10px;   
     vertical-align: middle;
 }
+.inline-block {
+    display: inline-block
+}
 
+.inline {
+    /* display: inline */
+}
+
+.block {
+    display: block;
+}
+
+.ingredient-category {
+    /* border-bottom: 3px solid grey; */
+    /* border-top: 3px solid grey; */
+    border-radius: 5px;
+}
+.display-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* FOR SPIRITS */
+.main-container {
+    width: 650px;
+    display: grid;
+    grid-template-columns: 80% 35%; /* adjust 300px as needed */
+    /* gap: 1%;  */
+    /* 
+    optional, adds some space between the columns */
+}
+
+.selected-ingredients-container {
+    /* add any styles here as needed */
+}
+
+
+/* /////////////// /////////////// /////////////// /////////////// /////////////// */
+/* List of Cocktails */
 .selectionlist {
-    width: 48%;
+    width: 60%;
     margin: 5px;
     vertical-align: top;
 }
 .removepadding {
-    padding: 0;
+    /* padding: 0; */
 }
 .generalise-list {
     list-style-type: none;
 }
 
 .cocktail-selection-list {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    align-items: flex-start;
+    /* width: 100%; */
+    /* height: auto; */
+    /* margin: 0 auto; */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: left; */
+    /* align-items: flex-start; */
 }
 
 .cocktail-selection-box {
-    width: 130px;
+    /* width: 130px; */
     block-size: fit-content;
     /* border: 1px solid red; */
     padding-top: 20px;
@@ -99,7 +123,8 @@ a.font {
 }
 
 .add-border {
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    /* border: 1px solid black; */
+    /* box-shadow: 0 0 10px white; */
+    /* border-radius: 10px; */
+    /* margin-bottom: 10px; */
 }

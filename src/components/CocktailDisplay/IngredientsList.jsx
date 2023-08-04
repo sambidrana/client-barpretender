@@ -7,7 +7,7 @@ const IngredientsList = ({ingredientsArray}) => {
 
         <div className="ingredients-container">
             <h2>{ingredient}</h2>
-            <ul className="removepadding">
+            <ul >
                 { ingredientsArray.map((ingredient, index) => {
                     return <li key={index} className="generalise-list">{ingredient.trim()}</li>
                 })}

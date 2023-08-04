@@ -20,10 +20,10 @@ const Root = () => {
     }, []); 
 
     return (
-        <div className="container">
-            <header>
+        <div >
+            <header className="root-header">
                 <div className="inline-block welcome">
-                    <h2 className="header-welcome">Welcome {username}, the bar is now yours!</h2>
+                    <h2 className="header-welcome">Welcome <span className="header-username">{username}</span>, the bar is now yours!</h2>
                 </div>
                 <div className="inline-block">
                     {/* check if to show admin button */}
@@ -34,13 +34,17 @@ const Root = () => {
                     <SignOut />
                 </div>
             </header>
+
+            <div className="">
             {/* Cocktail selection list */}
-            <div className="selectionlist inline-block add-border category-container">
+            <div className="selectionlist inline-block category-container">
                 <CategorySelectionList ingredientList={ setIngredientsList } />
             </div>
             <div className="selectionlist inline-block cocktail-container">
                 <CocktailDisplayList ingredients={ ingredientList } />
             </div>
+            </div>
+
         </div>
     );
 };

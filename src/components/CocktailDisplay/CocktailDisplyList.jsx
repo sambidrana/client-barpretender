@@ -7,8 +7,8 @@ const CocktailDisplayList = function ( props ) {
 
   return (
     <div className="display-cocktail-container">
-      <SortIngredients ingredients={props.ingredients} onClick={setCocktail}/>
-      <CocktailDisplay cocktailId={cocktail} ingredientsChange={props.ingredients} />
+        <SortIngredients ingredients={props.ingredients} onClick={setCocktail}/>
+        <CocktailDisplay cocktailId={cocktail} ingredientsChange={props.ingredients} />
     </div>
   );
 };

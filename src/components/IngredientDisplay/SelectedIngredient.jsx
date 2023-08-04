@@ -21,15 +21,19 @@ const SelectedIngredient = ( props ) => {
   return (
     <div className="selected-list">
         <div>
-            <h3>Ingredients selected</h3>            
+            <h2>Selected Ingredients</h2>
         </div>
         <div>
             <ul>
                 { ingredientList.map((ingredient, index) => {
-                    return <li key={index} className="selected-ingredient"> 
+                  return (
+                    <li key={index} className="selected-ingredient"> 
+                      <div className="selected-list-container">
                         <span>{ingredient.name[0].toUpperCase()+ingredient.name.slice(1)}</span>
-                        <span><button onClick={ _handleClick } value={index}>x</button></span>
-                    </li>;
+                        <button className="selected-list-btn" onClick={_handleClick} value={index}>Remove</button>
+                      </div>
+                    </li>
+                  );
                 })}
             </ul>
         </div>

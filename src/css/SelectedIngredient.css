@@ -1,70 +1,92 @@
 .display-cocktail-container {
-    display: flex;
-    justify-content: space-between;
+  display: grid;
+  grid-template-columns: 80% 30%;
+
+  justify-content: space-between;
 }
 .selected-list {
-    padding: 5spx;
-    width: 100%;
-    /* border: 1px solid grey; */
-    background-color: gray;
-    border-radius: 5px;
+  padding: 5px;
+  background-color: rgba(128, 128, 128, 0.122);
+  letter-spacing: .5px;
 }
-
+.selected-list > div > h2 {
+    text-decoration: underline;
+}
 .selected-list > div:first-child {
-    border-bottom: 1px solid white;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.426);
 }
 
 ul:has(.selected-ingredient) {
-    padding-left: 0;
+  padding: 10px;
 }
 
 .selected-ingredient {
-    list-style-type: none;
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+.selected-list-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+
 }
 
+.selected-list-btn {
+  justify-self: end;
+  padding: 5px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+
+}
+.selected-list-btn:hover{
+    background-color: rgba(169, 169, 169, 0.695);
+}
+.selected-list-btn:active {
+    box-shadow: 2px 2px 5px black;
+}
+
+
 .ingredient-lists {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: flex-start;
+  margin-bottom: 80px;
 }
 
 .ingredient-box {
-    width: 130px;
-    block-size: fit-content;
-    padding-top: 20px;
-    min-inline-size: fit-content;
-    cursor: pointer;
-    /* Add transition property for smooth transformation */
-    transition: transform .2s; 
+  width: 130px;
+  block-size: fit-content;
+  padding-top: 20px;
+  min-inline-size: fit-content;
+  cursor: pointer;
+  /* Add transition property for smooth transformation */
+  transition: transform 0.2s;
 }
 
 .ingredient-box:hover {
-    /* transform property to scale the box on hover */
-    transform: scale(1.3);
-    text-shadow: 0 0 2px white;
-    font-size: 1.1em;
+  /* transform property to scale the box on hover */
+  transform: scale(1.3);
+  text-shadow: 0 0 2px white;
+  font-size: 1.1em;
 }
 
 img {
-    width: 50px;
+  width: 50px;
 }
 
-.display-cocktail   {
-    width: 40%;
-    margin: 10px;
-    border-radius: 10px;
+.display-cocktail {
+  width: 70%;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 .category-container {
-    width: 25%;
+  width: 25%;
 }
 .cocktail-container {
-    width: 20%;
-}
-.display-cocktail {
-    width: 90%;
+  width: 20%;
 }
