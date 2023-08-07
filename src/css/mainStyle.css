@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    /* border: 1px solid black; */
+    margin: 0;
+    padding: 0;
+    font-family: 'Philosopher', sans-serif;
+
+}
+
+body {
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(245, 222, 179);
+        /* background-image: 
+        linear-gradient(to right, rgba(255,255,255,0.5), rgba(255,255,255,0.5)), 
+        url("../../public/bartender-cocktail.jpg"); */
+}
+/* Header */
+.header-container {
+    max-width: 1224px;
+    margin: 0 auto;
+}
+.root-title {
+    padding: 10px;
+    font-size: 2em;
+    text-shadow: 2px 2px 2px white;
+}
+.root-header {
+    display: grid;
+    grid-template-columns: 92% 8%;
+    grid-gap: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+
+}
+.header-username {
+    text-shadow: 0 0 1px white;
+}
+.header-welcome {
+    font-size: 2em;
+    padding: 22px;
+    text-align: left;
+    background-color: rgba(128, 128, 128, 0.408);
+}
+.header-logo-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 5px;
+    justify-items: center;
+    align-items: center;
+}
+.header-logo {
+    width: 30px; 
+    padding: 2px;
+    transition: transform 0.2s;
+
+}
+.header-logo:hover {
+    transform: scale(1.3);
+}
+
+/* Selection Container - root */
+.root-selection-container {
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+.category-container {
+    grid-column: 1;
+    justify-self: end;
+}
+.cocktail-container {
+    width: 1350px;
+    margin-left: 20px;
+}
+/* Category Selection List */
+.main-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    justify-items: center;
+}
+.display-cocktail-container {
+    display: grid;
+    grid-template-columns: 40% 55%;
+    gap: 100px;
+}
+.ingredient-selection-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 5px;
+    margin: 10px;
+}
+
+.generalise-list {
+    justify-self: center;
+    align-self: center;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+.ul-cocktails {
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.cocktail-selection-box img {
+    width: 50px;  /* or any size you want */
+    height: 50px;  /* maintains aspect ratio */
+    border: 1px solid black;
+}
+.cocktail-selection-box {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .cocktail-selection-box:hover {
+    transform: scale(1.1);
+  }
+  
+  .cocktail-selection-button {
+    background: none;
+    border: none;
+    color: inherit;
+    text-align: inherit;
+    outline: inherit;
+    /* other styles... */
+  }
+  
+
+/* Display Image */
+.display-container {
+    width: 450px;
+    padding: 20px;
+    border-radius: 40px;
+    background-color: white;
+    box-shadow: 0 0 5px black;
+}
+.display-container > h2 {
+    color: red;
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: 2px;
+    font-size: 2em;
+}
+.display-cocktail {
+    width: 250px;
+    height: 300px;
+}
+.display-img {
+    margin-top: 10px;
+}
+.display-ingredients {
+    margin-top: 10px;
+}
+
+.ingredients-container > h2, .methods-container > h2{
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    text-decoration: underline ;
+    text-shadow: 0px 0px 2px black;
+}
+.ingredients-lists {
+    text-align: start;
+    margin: 0 auto;
+    list-style: inside;
+    font-size: large;
+    padding: 5px;
+}
+.ingredients-container {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 0 5px black;
+  }
+  
+  /*    Methods   */
+.methods-container > p {
+    font-size: 1.2em;
+    margin-top: 5px;
+    text-align: start;
+    padding: 5px;
+}  
+.methods-container {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 0 5px black;
+}  
+.display-methods {
+    margin-top: 25px;
+}

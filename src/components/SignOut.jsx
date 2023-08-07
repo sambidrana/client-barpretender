@@ -12,7 +12,7 @@ const SignOut = () => {
 
   return (
     <>
-      <img className="pointer signout-icon" src="public/sign_out.png" alt="sign-out" onClick={_handleSignOut}/>
+      <img className="pointer signout-icon header-logo" src="public/sign_out.png" alt="sign-out" onClick={_handleSignOut}/>
     </>
   );
 };

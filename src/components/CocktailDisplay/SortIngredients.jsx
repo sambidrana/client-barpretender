@@ -55,36 +55,39 @@ const SortIngredients = (props) => {
   }, [ingredients, responseData]);
 
   
-  const _handleClick = (e) => {
-    props.onClick(e.target.value);
+  const _handleClick = (cocktailId) => {
+    props.onClick(cocktailId);
   };
 
   return (
-    <div>
-      <div className="add-border">
-        <h3>List of Cocktails</h3>
-        {matchingCocktails.length > 0 ? (
-          <ul className="removepadding">
-            <div className="ingredient-selection-list">
-            {matchingCocktails.map((cocktail) => (
-              <li key={cocktail.id} className="generalise-list inline-block">
-                <div className="cocktail-selection-box">
+    <>
+  {ingredients.length > 0 ? (  // Only render the list if ingredients array is not empty
+    <div className="cocktails-list-container">
+      <h2>List of Cocktails</h2>
+      {matchingCocktails.length > 0 ? (
+        <ul className="ingredient-selection-list ul-cocktails">
+          {matchingCocktails.map((cocktail) => (
+            <li key={cocktail.id} className="generalise-list">
+              <div className="cocktail-selection-box" onClick={() => _handleClick(cocktail.id)} tabIndex="0">
                 <img src={cocktail.image} alt={cocktail.name} />
-                <button value={cocktail.id} onClick={_handleClick} className="block cocktail-selection-button">
+                <div className="cocktail-selection-button">
                   {cocktail.name}
-                </button>
                 </div>
-              </li>
-            ))}
-            </div>
-          </ul>
-        ) : (
-          <p>No cocktails found with the selected ingredients.</p>
-        )}
-      </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No cocktails found with the selected ingredients.</p>
+      )}
     </div>
+  ) : null} 
+</>
+
   );
+  
 };
 
 export default SortIngredients;
+
 

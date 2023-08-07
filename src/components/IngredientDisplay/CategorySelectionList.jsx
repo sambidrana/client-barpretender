@@ -58,7 +58,7 @@ const CategorySelectionList = ( props ) => {
     <div className="main-container">
     <div className="selections-container">
         <div className="ingredient-category">
-            <h3>Base Spirit</h3>
+            <h2>Base Spirit</h2>
         </div>
         <div className="ingredient-lists">
             {baseSpirit.map((ingredient, index) => {
@@ -66,7 +66,7 @@ const CategorySelectionList = ( props ) => {
             })}
         </div>
         <div className="ingredient-category">
-            <h3>Other Alcohol</h3>
+            <h2>Other Alcohol</h2>
         </div>
         <div className="ingredient-lists">
             {otherAlcohol.map((ingredient, index) => {
@@ -74,7 +74,7 @@ const CategorySelectionList = ( props ) => {
             })}
         </div>
         <div className="ingredient-category">
-            <h3>Other Ingredient</h3>
+            <h2>Other Ingredient</h2>
         </div>
         <div className="ingredient-lists">        
             {otherIngredient.map((ingredient, index) => {

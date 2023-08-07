@@ -3,13 +3,12 @@ import axios from "axios";
 import Method from "./Methods";
 import IngredientsList from "./IngredientsList";
 import Image from "./Image";
-// import "./Display.css"
 
 const CocktailDisplay = (props) => {
   const { cocktailId, ingredientsChange } = props;
   const [displayCocktail, setDisplayCocktail] = useState([]);
   // const [reset, setReset ] = useState(false)
-  console.log(ingredientsChange)
+  console.log(ingredientsChange);
 
   const SERVER_URL = `http://localhost:3000/cocktails/${cocktailId}`;
 
@@ -39,22 +38,20 @@ const CocktailDisplay = (props) => {
 
   return (
     <>
-      <div className="display-container add-border">
-        <h1> {displayCocktail.name} </h1>
-        {cocktailId ? (
-          <div>
-            <div className="block"> 
+      {cocktailId  && displayCocktail ? (
+        <div className="display-container">
+          <h2> {displayCocktail.name} </h2>
+          <div className="display-img">
             <Image cocktailData={displayCocktail} />
-            </div>
-            <div className=""> 
-            <IngredientsList ingredientsArray={ingredientsArray} />
-            </div>
-            <div className=""> 
-            <Method cocktailData={displayCocktail} />
-            </div>
           </div>
-        ) : null}
-      </div>
+          <div className="display-ingredients">
+            <IngredientsList ingredientsArray={ingredientsArray} />
+          </div>
+          <div className="display-methods">
+            <Method cocktailData={displayCocktail} />
+          </div>
+        </div>
+      ) : null}
     </>
   );
 };

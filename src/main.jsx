@@ -4,7 +4,6 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import './css/style.css'
 import Root from './routes/root';
 import SignIn from './routes/SignIn';
 import SignUp from './routes/SignUp';
