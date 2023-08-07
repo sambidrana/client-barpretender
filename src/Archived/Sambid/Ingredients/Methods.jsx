@@ -7,7 +7,7 @@ const Method = ({cocktailData}) => {
         <>
         <div className="methods-container">
             <h2>Method</h2>
-            <p>{ method } </p>
+            <p>{ method }</p>
 
         </div>
         </>

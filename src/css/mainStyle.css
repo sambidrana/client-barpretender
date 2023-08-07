@@ -1,203 +1,348 @@
-@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 * {
-    /* border: 1px solid black; */
-    margin: 0;
-    padding: 0;
-    font-family: 'Philosopher', sans-serif;
-
+  /* border: 1px solid black; */
+  margin: 0;
+  padding: 0;
+  font-family: "Philosopher", sans-serif;
 }
-
 body {
-    margin: 0 auto;
-    text-align: center;
-    background-color: rgb(245, 222, 179);
-        /* background-image: 
-        linear-gradient(to right, rgba(255,255,255,0.5), rgba(255,255,255,0.5)), 
-        url("../../public/bartender-cocktail.jpg"); */
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(
+    295deg,
+    rgba(246, 231, 231, 1) 23%,
+    rgba(238, 164, 127, 1) 100%
+  );
+  color: #00539c;
 }
 /* Header */
 .header-container {
-    max-width: 1224px;
-    margin: 0 auto;
+  max-width: 1224px;
+  margin: 0 auto;
 }
 .root-title {
-    padding: 10px;
-    font-size: 2em;
-    text-shadow: 2px 2px 2px white;
+  padding: 10px;
+  font-size: 2em;
+  text-shadow: 2px 2px 2px white;
 }
 .root-header {
-    display: grid;
-    grid-template-columns: 92% 8%;
-    grid-gap: 10px;
-    letter-spacing: 1px;
-    margin-bottom: 25px;
-
+  display: grid;
+  grid-template-columns: 92% 8%;
+  grid-gap: 10px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
 }
 .header-username {
-    text-shadow: 0 0 1px white;
+  text-shadow: 0 0 1px white;
 }
 .header-welcome {
-    font-size: 2em;
-    padding: 22px;
-    text-align: left;
-    background-color: rgba(128, 128, 128, 0.408);
+  font-size: 2em;
+  padding: 22px;
+  text-align: left;
+  background-color: rgba(128, 128, 128, 0.408);
 }
 .header-logo-container {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    padding: 5px;
-    justify-items: center;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 5px;
+  justify-items: center;
+  align-items: center;
 }
 .header-logo {
-    width: 30px; 
-    padding: 2px;
-    transition: transform 0.2s;
-
+  width: 30px;
+  padding: 2px;
+  transition: transform 0.2s;
 }
 .header-logo:hover {
-    transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 /* Selection Container - root */
 .root-selection-container {
-    display: grid;
-    grid-template-columns: 45% 55%;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  margin-top: 80px;
 }
 .category-container {
-    grid-column: 1;
-    justify-self: end;
+  grid-column: 1;
+  justify-self: end;
 }
 .cocktail-container {
-    width: 1350px;
-    margin-left: 20px;
+  width: 1350px;
+  margin-left: 20px;
 }
 /* Category Selection List */
 .main-container {
-    display: grid;
-    grid-template-columns: 70% 30%;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  justify-items: center;
 }
 .display-cocktail-container {
-    display: grid;
-    grid-template-columns: 40% 55%;
-    gap: 100px;
+  display: grid;
+  grid-template-columns: 40% 55%;
+  gap: 100px;
 }
 .ingredient-selection-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    gap: 5px;
-    margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 5px;
+  margin: 10px;
 }
 
 .generalise-list {
-    justify-self: center;
-    align-self: center;
-    text-decoration: none;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
+  justify-self: center;
+  align-self: center;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
 }
 .ul-cocktails {
-    list-style-type: none;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
+  list-style-type: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
 }
 
 .cocktail-selection-box img {
-    width: 50px;  /* or any size you want */
-    height: 50px;  /* maintains aspect ratio */
-    border: 1px solid black;
+  width: 50px; /* or any size you want */
+  height: 50px; /* maintains aspect ratio */
+  border: 1px solid black;
 }
 .cocktail-selection-box {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .cocktail-selection-box:hover {
-    transform: scale(1.1);
-  }
-  
-  .cocktail-selection-button {
-    background: none;
-    border: none;
-    color: inherit;
-    text-align: inherit;
-    outline: inherit;
-    /* other styles... */
-  }
-  
-  .selected-list-heading > h2 {
-    padding: 2px;
-    margin-bottom: 15px;
-  }
-  .selected-list-body {
-    padding: 2px;
-    margin-top: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cocktail-selection-box:hover {
+  transform: scale(1.1);
+}
+
+.cocktail-selection-button {
+  background: none;
+  border: none;
+  color: inherit;
+  text-align: inherit;
+  outline: inherit;
+  /* other styles... */
+}
+
+.selected-list-heading > h2 {
+  padding: 2px;
+  margin-bottom: 15px;
+}
+.selected-list-body {
+  padding: 2px;
+  margin-top: 5px;
+}
+.selected-list {
+    width: 110px;
   }
 
 
 /* Display Image */
 .display-container {
-    width: 450px;
-    padding: 20px;
-    border-radius: 40px;
-    background-color: white;
-    box-shadow: 0 0 5px black;
+  border: solid 60px white;
+
+  box-shadow: 0 0 22px #999;
+  background-color: white;
+  width: 500px;
 }
 .display-container > h2 {
-    color: red;
-    text-shadow: 1px 1px 1px black;
-    letter-spacing: 2px;
-    font-size: 2em;
+  color: red;
+  text-shadow: 1px 1px 1px black;
+  letter-spacing: 2px;
+  font-size: 2em;
+  background-color: white;
 }
 .display-cocktail {
-    width: 250px;
-    height: 300px;
+  width: 250px;
+  height: 300px;
 }
 .display-img {
-    margin-top: 10px;
+  margin-top: 10px;
+  background-color: white;
 }
 .display-ingredients {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
-.ingredients-container > h2, .methods-container > h2{
-    font-size: 1.8em;
-    letter-spacing: 1px;
-    text-decoration: underline ;
-    text-shadow: 0px 0px 2px black;
+.ingredients-container > h2,
+.methods-container > h2 {
+  font-size: 1.8em;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  text-shadow: 0px 0px 2px black;
+  margin-bottom: 15px;
 }
 .ingredients-lists {
-    text-align: start;
-    margin: 0 auto;
-    list-style: inside;
-    font-size: large;
-    padding: 5px;
+  text-align: start;
+  margin: 0 auto;
+  list-style: inside;
+  font-size: large;
+  padding: 5px;
 }
 .ingredients-container {
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-    border-radius: 40px;
-    box-shadow: 0 0 5px black;
-  }
-  
-  /*    Methods   */
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  box-shadow: 0 0 22px #999;
+}
+
+/*    Methods   */
 .methods-container > p {
-    font-size: 1.2em;
-    margin-top: 5px;
-    text-align: start;
-    padding: 5px;
-}  
+  font-size: 1.2em;
+  margin-top: 5px;
+  text-align: start;
+  padding: 5px;
+}
 .methods-container {
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-    border-radius: 40px;
-    box-shadow: 0 0 5px black;
-}  
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  /* border-radius: 40px; */
+  box-shadow: 0 0 22px #999;
+}
 .display-methods {
-    margin-top: 25px;
+  margin-top: 25px;
+}
+
+/* Media Query */
+
+/* Extra small devices (phones, up to 600px) */
+@media screen and (max-width: 600px) {
+  /* CSS rules here */
+  .root-container {
+    margin: 0 auto;
+    color: red;
+  }
+  .header-container {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .root-selection-container {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    margin-top: 80px;
+  }
+  .main-container {
+    display: grid;
+    grid-template-columns: 150% 30%;
+    justify-items: center;
+  }
+  .category-container {
+    grid-column: 1;
+    justify-self: end;
+  }
+  .cocktail-container {
+    width: 350px;
+    margin-left: 20px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px) {
+  /* CSS rules here */
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+  /* CSS rules here */
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  /* CSS rules here */
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+  /* CSS rules here */
+  .root-container {
+    margin: 0 auto;
+    color: red;
+  }
+  /* Header */
+  .header-container {
+    max-width: 1000px;
+  }
+  .root-title {
+    padding: 10px;
+    font-size: 1.2em;
+  }
+  .root-header {
+    margin-bottom: 0;
+  }
+  .header-welcome {
+    font-size: 1.2em;
+    padding: 15px;
+  }
+
+  /* Selection Container - root */
+  .root-selection-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 50px;
+    justify-items: start;
+  }
+  .main-container {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    font-size: 0.75em;
+    justify-items: center;
+  }
+  .category-container {
+    grid-column: 1;
+    justify-self: start;
+  }
+  .cocktail-container {
+    width: 350px;
+    margin-left: 20px;
+  }
+  .ingredient-box {
+    width: 120px;
+    block-size: fit-content;
+    min-inline-size: fit-content;
+    font-size: 1.2em;
+  }
+  .ingredient-box:hover {
+    /* transform property to scale the box on hover */
+    font-size: 1.3em;
+  }
+  .ingredient-box > img {
+    width: 40px;
+  }
+  /* .selected-ingredients-container {
+    width: 150px;
+  } */
+  .selected-list-heading > h2 {
+    font-size: 1.1em;
+    padding: 2px;
+    margin-bottom: 5px;
+  }
+  .selected-list-body {
+    padding: 2px;
+    margin-top: 5px;
+    font-size: .85em;
+
+  }
+  .selected-list-btn {
+    font-size: .75em;
+    padding: 3px;
+    letter-spacing: .5px;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+  .selected-list-container {
+    display: block;
+    font-size: 1.2em;
+    padding: 5px;
+  }
+  /* Category Selection List */
+
+  .display-cocktail-container {
+    display: grid;
+    grid-template-columns: 40% 55%;
+    gap: 100px;
+  }
 }

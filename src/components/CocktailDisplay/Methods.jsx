@@ -6,7 +6,7 @@ const Method = ({cocktailData}) => {
         <div className="methods-container">
             <h2>Method</h2>
             {method.map((step, index) => {
-                return <p key={index}>{index + 1}. {step}.</p>
+                return <p key={index}>{index + 1}. {step}</p>
             })}
         </div>
         </>

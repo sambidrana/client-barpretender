@@ -19,7 +19,7 @@ const Root = () => {
   }, []);
 
   return (
-    <div>
+    <div className="root-container">
       <div className="header-container">
         <div className="root-title">
           <h1>Bar-Pretender</h1>

@@ -20,11 +20,12 @@ ul:has(.selected-ingredient) {
 }
 .selected-list-container {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 2fr 1fr;
   align-items: center;
   font-size: 1.2em;
   font-weight: bold;
   letter-spacing: 1px;
+  padding: 5px;
 
 }
 
@@ -33,7 +34,8 @@ ul:has(.selected-ingredient) {
   padding: 5px;
   border-radius: 5px;
   letter-spacing: 1px;
-
+  margin-left: 10px;
+  color: red;
 }
 .selected-list-btn:hover{
     background-color: rgba(169, 169, 169, 0.695);
