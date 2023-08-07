@@ -20,10 +20,10 @@ const SelectedIngredient = ( props ) => {
 
   return (
     <div className="selected-list">
-        <div>
+        <div className="selected-list-heading">
             <h2>Selected Ingredients</h2>
         </div>
-        <div>
+        <div className="selected-list-body">
             <ul>
                 { ingredientList.map((ingredient, index) => {
                   return (
